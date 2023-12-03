@@ -494,7 +494,7 @@ function App() {
                     : ""
                 } ${
                   activeSteps[index] && active
-                    ? "duration-200 text-[24px] font-semibold bg-[#0870FC] border-[#0870FC]"
+                    ? "duration-200 text-[24px] font-semibold bg-[#0870FC] border-none"
                     : "text-[16px] "
                 }`}
               >
