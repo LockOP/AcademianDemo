@@ -22,7 +22,7 @@ function App() {
 
   const [ind2, setInd2] = useState(0);
 
-  const [color, setColor] = useState("141414");
+  const [color, setColor] = useState("bg-[#141414]");
   const [hover2, setHover2] = useState(false);
 
   const [hover3, setHover3] = useState(false);
@@ -345,15 +345,17 @@ function App() {
       </div>
       <div className="font-sans h-screen w-screen bg-[black] flex justify-center items-center overflow-x-clip relative">
         <div
-          className={`w-[250px] h-[280px] rounded-xl relative flex flex-col justify-between items-start text-[white] p-4 transition-all duration-200 ease-in-out hover:bg-[#${color}]`}
+          className={`w-[250px] h-[280px] rounded-xl relative flex flex-col justify-between items-start text-[white] p-4 transition-all duration-200 ease-in-out  ${
+            hover2 ? color : ""
+          }`}
           onMouseEnter={() => {
             setTimeout(() => {
-              setColor("00914A");
+              setColor("bg-[#00914A]");
             }, 300);
             setHover2(true);
           }}
           onMouseLeave={() => {
-            setColor("141414");
+            setColor("bg-[#141414]");
             setHover2(false);
           }}
         >
